@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700;9..40,800&family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-size: 62.5%;
+  --text-font: 'DM Sans', sans-serif;;
+  --title-font: 'Montserrat', sans-serif;;
+  --text-color: #34355B;
+  --input-bg: #DCE2E9;
+  --button-bg: #7879F1;
+  --button-bgh: #6969d1;
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font: normal normal 1.6rem var(--text-font);
+  color: var(--text-color);
+  text-align: center;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(288deg, #C2E9FB 0%, #A1C4FD 100%);
+
+  display: grid;
+  place-items: center;
+}
+
+main {
+  border-radius: 6px;
+  background: #FFF;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+  padding: 4.8rem 6.4rem 6.4rem;
+  width: min(42.8rem, 90%);
+  margin-top: -12rem;
+}
+
+button {
+  background-color: var(--button-bg);
+  color: white;
+
+  font-weight: 700;
+  padding: 1.6rem;
+
+  border: none;
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  transition: background .3s;
+}
+
+button:hover {
+  background-color: var(--button-bgh);
+}
+
+/*SCREEN 1*/
+
+.hide {
+  display: none;
+}
+
+.screen1 h1 {
+  font-family: var(--title-font);
+  font-weight: 600;
+  font-size: 2.4rem;
+  margin-bottom: 1.6rem;
+}
+
+.screen1 h2 {
+  margin-bottom: 4.8rem;
+  opacity: .8;
+}
+
+.screen1 input {
+  background-color: var(--input-bg);
+  width: 5rem;
+  border-radius: 4px 0 0 4px;
+}
+
+.screen1 button {
+  border-radius: 0 4px 4px 0;
+}
+
+.screen1 input {
+  border: none;
+  padding: 1.6rem;
+}
+
+.screen1 p {
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+  opacity: .8;
+}
+
+.screen1 form {
+  display: flex;
+  justify-content: center;
+}
+
+/*SCREEN 2*/
+
+.screen2 h1 {
+  font-family: var(--title-font);
+  font-weight: 600;
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+}

@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+:root {
+  font-size: 62.5%;
+
+  --hue: 240;
+
+  --color-base-white: hsl(0, 0%, 100%);
+  --color-base-grey-100: hsl(0, 0%, 96%);
+  --color-base-grey-300: hsl(var(--hue), 6%, 58%);
+  --color-base-grey-500: hsl(0, 0%, 24%);
+  --color-base-grey-900: hsl(var(--hue), 6%, 13%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font: normal normal 1.6rem 'Mulish', sans-serif;
+  color: var(--color-base-grey-900)
+}
+
+body {
+  background-color: var(--color-base-white);
+  height: 100vh;
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  overflow-y: hidden;
+}
+
+header,
+nav,
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 7.2rem;
+}
+
+header {
+  --startY: -100%;
+  animation: move .2s;
+}
+
+nav ul li {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-base-grey-300)
+}
+
+nav ul li.active {
+  color: var(--color-base-grey-900);
+}
+
+header form {
+  flex: 1; /* preenche todo o espaço disponível, isto é, tudo o que não estiver ocupado por outros elementos - "O QUE SOBRAR" */
+}
+
+.input-wrapper label {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 1.6rem;
+  background-color: var(--color-base-grey-100);
+  border: none;
+  border-radius: .6rem;
+  font-weight: 600;
+}
+
+.input-wrapper input::placeholder {
+  opacity: 0.56;
+  color: var(--color-base-grey-500)
+}
+
+.avatar {
+  width: 4.2rem;
+  height: 4.2rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+main {
+  background-color: var(--color-base-grey-100);
+  overflow-y: scroll;
+  scrollbar-gutter: stable both-edges;
+}
+
+.container {
+  padding: 1.6rem 3.2rem;
+  width: min(112rem, 100%);
+  margin: 0 auto;
+}
+
+
+footer p {
+  text-align: center;
+  padding: 1.6rem;
+  font-weight: 600;
+
+  --startY: 100%;
+  animation: move .2s;
+}
+
+
+/* GALERIA */
+
+main h1 {
+  padding-top: 1.6rem;
+  font-size: 2.4rem;
+}
+
+.gallery  {
+  margin-top: 3.2rem;
+  display: grid; 
+  grid-template-columns: repeat(3,1fr);
+  gap: 2.2rem;
+}
+
+.item {
+  background-color: var(--color-base-white);
+  border-radius: .8rem;
+  overflow: hidden;
+
+  --delay: .4s;
+  animation: appear .4s var(--delay) backwards;
+}
+
+.item img,
+.item h2,
+.item span {
+  cursor: pointer;
+}
+
+.item img {
+
+    /*
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-delay: 0;
+  transition-timing-function: ease-out;
+
+  transition: filter 200ms ease-out, transform 600ms ease-in;
+
+  */
+
+  transition: all 1300ms 0ms ease-out;
+
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+
+  display: block;
+}
+
+.item img:hover {
+  filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+  transform: scale(1.1) rotate(-2deg);
+}
+
+.details {
+  padding: 2.2rem;
+  background-color: var(--color-base-white);
+  z-index: 1;
+  position: relative;
+}
+
+.details h2 {
+  font-size: 1.8rem;
+}
+
+.tags {
+  margin-top: 1.2rem;
+}
+
+.tags span {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  border-radius: .4rem;
+  line-height: 0;
+  padding: .6rem;
+  background-color: var(--color-base-grey-100);
+}
+
+@keyframes move {
+  from {
+    transform: translateY(var(--startY));
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+}

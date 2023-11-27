@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,700;0,800;1,400&display=swap');
+
+:root {
+  --corFundo: #ECE9FD;
+  --corTitulo: #090039;
+  --corTexto1: rgba(10, 0, 57, 0.64);
+  --corTexto2: #7158EF;
+
+  --fonte: 'Epilogue', sans-serif;
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font: normal normal 1.6rem var(--fonte);
+  color: var(--corTitulo);
+  line-height: 3.2rem;
+}
+
+body {
+  background: var(--corFundo);
+  padding: 6.0rem 2.3rem;
+}
+
+main {
+  max-width: 33.0rem;
+  margin: auto;
+}
+
+h1 {
+  font-size: 4.0rem;
+  font-weight: 800;
+  line-height: 4.8rem;
+  margin-bottom: 1.5rem;
+}
+
+main > section > p:first-child {
+  color: var(--corTexto2);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 1.7rem;
+}
+
+main section h1 + p {
+  color: var(-corTexto1);
+  margin-bottom: 3.2rem;
+  text-align: justify;
+}
+
+ul {
+  margin-top: 7.2rem;
+}
+
+ul li span {
+  font-weight: 800;
+  font-size: 7.2rem;
+  line-height: 8.0rem;
+  letter-spacing: -2px;
+}
+
+ul li {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  max-width: 25.7rem;
+  display: flex;
+  align-items: center;
+  gap: 3.8rem;
+}
+
+ul li + li {
+  margin-top: 3.2rem;
+}
+
+a:hover {
+  font-weight: bold;
+  color: var(--corTexto2)
+}
+
+@media (min-width: 700px) {
+  main {
+    max-width: 1020px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10rem;
+  }
+
+  body {
+    padding: 8rem;
+  }
+
+  main > section {
+    max-width: 484px;
+  }
+
+  ul li {
+    gap: 5.3rem;
+    max-width: 450px;
+  }
+}

@@ -1,0 +1,88 @@
+:root {
+
+  --font-title: 'Dosis', sans-serif;
+  --font-normal: 'Open sans', sans-serif;
+
+  --color-jacarta: #3F3D56;
+  --color-pink: #EE24FF;
+  --color-light-gray: #828282;
+  --color-white: #ECEFF2;
+
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: normal normal 1.5rem var(--font-normal);
+  color: var(--color-light-gray);
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  text-align: center;
+  padding: 0 2rem;
+}
+
+main {
+  max-width: 62.6rem;
+  margin: 6.4rem auto;
+  padding: 0 4rem;
+}
+
+main > img {
+  margin-bottom: 3.2rem;
+}
+
+h1, h1 * {
+  font-family: var(--font-title);
+  font-size: 3.2rem;
+  color: var(--color-jacarta);
+  margin-bottom: 3.2rem;
+}
+
+h1 > span {
+  color: var(--color-pink);
+  font-weight: bold;
+}
+
+p {
+  line-height: 2.2rem;
+}
+
+p + p {
+  margin-top: 3.2rem;
+}
+
+strong {
+  font-weight: 700;
+  color: var(--color-jacarta);
+}
+
+footer {
+  margin-top: 1.6rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 4.2rem;
+  justify-content: center;
+}
+
+nav ul li a {
+  color: var(--color-jacarta);
+  font-weight: 700;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.background {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}

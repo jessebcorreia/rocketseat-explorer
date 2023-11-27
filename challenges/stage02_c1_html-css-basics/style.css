@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: 1em 'Open Sans', Arial, sans-serif;
+  text-decoration: none;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+}
+
+#hero{
+  width: 600px;
+  margin: 0 auto 72px;
+}
+
+#hero img {
+  margin-bottom: 72px;
+}
+
+.corLaranja{
+  color: #FF9900;
+}
+
+strong {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin: 10px 0;
+  margin-bottom: 32px;
+}
+
+p{
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+footer {
+  width: 600px;
+  margin: auto;
+  border-top: 1px solid #ECEFF2;
+}
+
+footer a + a {
+  /* este seletor pega um "a", que tem anterior a ele um "a" */
+  margin-left: 28px;
+}
+
+#balls {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+}

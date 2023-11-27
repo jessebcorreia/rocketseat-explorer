@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap'); /*Open Sans*/
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400&display=swap'); /*JetBrains Mono*/
+
+:root {
+  --corFundo: #2F2E41;
+  --corFonteTitulo: #FFFFFF;
+  --corFonteNormal: #C2C2C2;
+  --corFonteDestaque: #00BFA6;
+  --fonteNormal: 'Open Sans', sans-serif;
+  --fonteTitulo: 'JetBrains Mono', monospace;
+}
+
+* {
+  font: normal normal 14px var(--fonteTitulo);
+  color: var(--corFonteTitulo);
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+body {
+  background: #2F2E41;
+  padding: 70px 20px 20px;
+}
+
+div#pagina {
+  margin: auto;
+  max-width: 1100px;
+}
+
+nav#navegacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+nav#navegacao ul {
+  display:flex;
+  gap: 64px;
+}
+
+nav#navegacao ul a:hover {
+  color: var(--corFonteDestaque);
+}
+
+main#conteudo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main#conteudo section {
+  max-width: 608px;
+}
+
+main#conteudo section p, main#conteudo section p * {
+  font-family: var(--fonteNormal);
+  color: var(--corFonteNormal);
+  font-size: 16px;
+  line-height: 28px;
+}
+
+main#conteudo section h1, main#conteudo section h1 * {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+strong.colorido {
+  color: var(--corFonteDestaque);
+}
+
+main#conteudo section p strong.colorido {
+  color: var(--corFonteDestaque);
+}
+
+img#cadeadoRodape {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+footer#rodape {
+  margin: 160px auto 0;
+  max-width: 570px;
+  border-top: solid var(--corFonteDestaque) 1px;
+  padding-top: 27px;
+}
