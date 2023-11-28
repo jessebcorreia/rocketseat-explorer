@@ -1,0 +1,164 @@
+:root {
+
+  --font-title: 'Staatliches', sans-serif;
+  --font-main: 'Poppins', sans-serif;
+
+  --color-main: #535971;
+  --color-secondary: #FF5374;
+  --color-background: #EFEFEF;
+  --color-white: #FFFFFF;
+  --color-gray: #C1BCCC;
+  --color-input-bg: #FAFAFC;
+  --color-input-bd: #E6E6F0;
+
+  font-size: 62.5%;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: normal normal 1.4rem var(--font-main);
+  border: none;
+}
+
+body {
+  background-color: var(--color-background);
+  padding: 0 2rem;
+}
+
+body::before {
+  content: '';
+  background: var(--color-main);
+  background: linear-gradient(90deg, var(--color-main) 0%, rgba(101,108,136,1) 100%);
+  width: 100%;
+  height: 36.8rem;
+  
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+header {
+  margin: 7rem auto 5rem;
+  display: grid;
+  gap: 1.8rem;
+}
+
+header h1 {
+  font-family: var(--font-title);
+  font-size: 4.8rem;
+  color: var(--color-white);
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--color-main);
+  font-family: var(--font-title);
+}
+
+header p {
+  font-size: 2rem;
+  max-width: 41.7rem;
+  color: var(--color-white);
+}
+
+header, main {
+  max-width: 75rem;
+}
+
+main {
+  background-color: white;
+  border-radius: 2rem;
+  margin: 0 auto 10rem;
+  box-shadow: .1rem .1rem .7rem .1rem hsla(0, 0%, 0%, 0.226);
+}
+
+form {
+  padding: 6.4rem;
+  display: grid;
+  gap: 3rem;
+}
+
+fieldset {
+  display: grid;
+  gap: 2rem;
+}
+
+fieldset legend {
+  color: var(--color-main);
+  width: 100%;
+  font-family: var(--font-title);
+  font-size: 2.4rem;
+  border-bottom: .1rem solid #E6E6F0;
+  padding-bottom: 1.6rem;
+  color: var(--color-main);
+}
+
+.wrapper-multiple-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.wrapper-three-columns {
+  display: flex;
+  gap: 2rem;
+}
+
+.wrapper-three-columns > div:nth-child(2),
+.wrapper-three-columns > div:nth-child(3) {
+  width: 30%;
+}
+
+.input-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper label {
+  color: var(--color-main);
+  margin-bottom: .8rem;
+}
+
+.input-wrapper label span {
+  color: var(--color-gray);
+  font-size: 1.2rem;
+  margin-left: 1.2rem;
+}
+
+.input-wrapper input {
+  border: .1rem solid var(--color-input-bd);
+  background-color: var(--color-input-bg);
+  border-radius: .8rem;
+  padding: 1.5rem;
+}
+
+main .inside-footer {
+  background: var(--color-main);
+  background: linear-gradient(0deg, var(--color-main) 0%, rgba(101,108,136,1) 100%);
+  display: flex;
+  padding: 5rem;
+  border-radius: 0 0 2rem 2rem;
+}
+
+.inside-footer button {
+  width: 100%;
+  padding: 1.5rem 4rem;
+  border-radius: 2rem;
+  color: var(--color-white);
+  background-color: var(--color-secondary);
+  font-family: var(--font-title);
+  font-size: 2rem;
+  cursor: pointer;
+
+  transition: filter .3s;
+}
+
+.inside-footer button:hover {
+  filter: brightness(.9);
+}
