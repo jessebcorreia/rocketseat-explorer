@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700;9..40,800&family=Dancing+Script&family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-size: 62.5%;
+
+  --color-dark-blue: #34355B;
+  --color-white: #FFFFFF;
+  --color-light-blue: #E4EDF1;
+  --color-orange: #FF9500;
+  --color-orange-hover: #e48500;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  font: normal normal 1.5rem 'DM Sans', sans-serif;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: linear-gradient(45deg, #190361 0%, #B0F 100%)
+}
+
+main {
+  background-color: var(--color-white);
+  width: 42rem;
+  min-height: 42rem;
+  padding: 4.8rem 6.4rem;
+  border-radius: 5px;
+  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.80);
+}
+
+h1 {
+  color: var(--color-dark-blue);
+  font: normal 700 2.4rem 'Montserrat', sans-serif;
+  margin-bottom: 1.7rem;
+}
+
+.section1 p {
+  margin-bottom: 2.6rem;
+}
+
+.section1 img:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+.section2 p {
+  background: var(--color-light-blue);
+  box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.50);
+  font: normal normal 2.4rem 'Dancing Script', cursive;
+}
+
+.section2 p:hover {
+  animation: appear 2s;
+}
+
+.section2 img {
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+}
+
+.section2 button {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  border-radius: 4px;
+  padding: 1.6rem;
+  cursor: pointer;
+  transition: background .3s;
+}
+
+.hide {
+  display: none
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
