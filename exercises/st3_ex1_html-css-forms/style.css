@@ -172,10 +172,6 @@ main form fieldset legend {
   background-position: right 24px top 50%;
 }
 
-input:invalid {
-  border: 2px solid var(--cor5)
-}
-
 .tresColunas {
   display: flex;
   gap: 20px;
@@ -210,3 +206,9 @@ input:invalid {
 .rodape-interno input:hover {
   background: var(--cor4_1);
 }
+
+/*
+input:invalid {
+  border: 2px solid var(--cor5)
+}
+*/
