@@ -21,4 +21,3 @@ window.addEventListener('popstate', router.handle)
 
 window.route = () => router.route()
 // atribuo na window a função route
-

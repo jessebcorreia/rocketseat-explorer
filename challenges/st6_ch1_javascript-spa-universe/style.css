@@ -1,0 +1,56 @@
+:root {
+  --font-main: 'Roboto', sans-serif;
+  font-size: 62.5%;
+}
+
+* {
+  font-size: 1.8rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-main);
+  color: white;
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+  background-color: black;
+  display: grid;
+  grid-template: 
+    "header" max-content
+    "main" 1fr;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  gap: 5rem;
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  gap: 4rem;
+  padding: 4rem 7.2rem;
+}
+
+main {
+  margin: 6rem 10rem;
+  grid-area: main;
+  background-color: green;
+}
+
+button {
+  background: transparent;
+  padding: 1.2rem 3.2rem;
+  border-radius: .5rem;
+  border: .2rem solid white;
+  cursor: pointer;
+  transition: background .3s, color .3s;
+}
+
+button:hover {
+  background-color: white;
+  color: #02799D;
+}
