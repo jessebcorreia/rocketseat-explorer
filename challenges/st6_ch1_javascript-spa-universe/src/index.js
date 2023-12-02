@@ -8,5 +8,5 @@ router.add("/exploration" , "/pages/exploration.html")
 router.add(404            , "/pages/404.html")
 
 router.handle()
-window.addEventListener('popstate', router.handle)
+window.onpopstate = () => router.handle()
 window.route = () => router.route()

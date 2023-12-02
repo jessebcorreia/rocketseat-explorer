@@ -22,15 +22,28 @@ body {
     "main" 1fr;
 }
 
+body {
+  background-image: url('/assets/mountains-universe-1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 ul {
   list-style-type: none;
   display: flex;
   gap: 5rem;
 }
 
+ul a {
+  font-size: 2.4rem;
+}
+
 header {
   grid-area: header;
   display: flex;
+  align-items: center;
   gap: 4rem;
   padding: 4rem 7.2rem;
 }
@@ -38,10 +51,23 @@ header {
 main {
   margin: 6rem 10rem;
   grid-area: main;
-  background-color: green;
 }
 
-button {
+h1 {
+  font-size: 4.8rem;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+  color: #E1E1E6;
+}
+
+p {
+  max-width: 65rem;
+  text-align: justify;
+  line-height: 2.8rem;
+  color: #E1E1E6;
+}
+
+.button {
   background: transparent;
   padding: 1.2rem 3.2rem;
   border-radius: .5rem;
@@ -50,7 +76,21 @@ button {
   transition: background .3s, color .3s;
 }
 
-button:hover {
+.button:hover {
   background-color: white;
   color: #02799D;
+}
+
+.active {
+  font-weight: 700;
+}
+
+#home-page {
+  position: relative;
+  top: 35%;
+  text-align: center;
+}
+
+#home-page h1 {
+  margin-bottom: 3.6rem;
 }
