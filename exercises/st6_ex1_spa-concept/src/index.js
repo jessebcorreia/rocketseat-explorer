@@ -14,8 +14,8 @@ router.add(404       , '/pages/404.html')
 // vou precisar chamar o método/função que está dentro da classe .
 router.handle()
 
-window.addEventListener('popstate', router.handle)
-//window.onpopstate = () => router.handle()
+window.onpopstate = () => router.handle()
+//window.addEventListener('popstate', router.handle) ñ funciona
 
 // eventos de click da navegação estão sendo atribuidos direto no index.html
 

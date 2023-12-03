@@ -14,32 +14,27 @@
 
 </head>
 <body>
+
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <a href="/" onclick="route()">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="/git-fav" onclick="route()">
+            Github Favorites
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
   <div id="app">
 
-    <header>
-      <h1>Github Favorites</h1>
-      <div class="search">
-        <label class="sr-only" for="input-search">Usuário do Github</label>
-        <input id="input-search" type="text" placeholder="Usuário do Github">
-        <button>&plus;</button>
-      </div>
-    </header>
-
-    <table>
-
-      <thead>
-        <tr>
-          <th>Usuário</th>
-          <th>Repositórios</th>
-          <th colspan="2">Seguidores</th>
-        </tr>
-      </thead>
-
-      <tbody>
-      </tbody>
-      
-    </table>
-  
   </div>
+
 </body>
 </html>
