@@ -61,6 +61,11 @@
  - **Link direto à pasta:** [acessar repositório](https://github.com/jessebcorreia/rocketseat-explorer/tree/main/challenges/st6_ch1_javascript-spa-universe)  
  - **Instruções do desafio:** [acessar notion](https://efficient-sloth-d85.notion.site/SPA-Universe-5f75e94ba7ce4292a06905eb3417420c)
 
+## Stage 06 - Desafio 02
+ - **Descrição:** criar um pequeno "CRUD", que se comunique com a API do github  
+ - **Nome da pasta:** `st6_ch2_javascript-spa-github-favorites`  
+ - **Link direto à pasta:** [acessar repositório](https://github.com/jessebcorreia/rocketseat-explorer/tree/main/challenges/st6_ch2_javascript-spa-github-favorites)  
+ - **Instruções do desafio:** [acessar notion](https://efficient-sloth-d85.notion.site/GitFav-f8ff1c18b23745c0b46cd8d61f74b596)  
 
 ## 🔗 Links
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)  
