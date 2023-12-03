@@ -23,24 +23,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font: normal 700 1.6rem var(--font-family);
+  font: normal normal 1.6rem var(--font-family);
   border: none;
+  text-decoration: none;
 }
 
 body {
-  display: grid;
-  grid-template: 
-  "header" max-content
-  "main" 1fr
-  ;
-
   background-color: black;
   color: white;
   height: 100vh;
 }
 
+header, #app {
+  margin: auto;
+  max-width: 150rem;
+}
+
 header {
-  grid-area: header;
   display: flex;
   place-content: space-between;
   place-items: center;
@@ -49,8 +48,9 @@ header {
 }
 
 #app {
-  grid-area: main;
   padding: 0 10rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .input-wrapper {
@@ -70,6 +70,10 @@ header {
   padding: 1.2rem 3.2rem;
   border-radius: .5rem;
   color: white;
+}
+
+#search-button:active {
+  filter: brightness(.9);
 }
 
 #search-input {
@@ -105,9 +109,84 @@ table {
   border-radius: 1.2rem;
 }
 
+
 table * {
   text-align: left;
   font-size: 2rem;
+}
+
+th {
+  background-color: var(--color-table-head-bg);
+  padding: 1.6rem 2.4rem 1.6rem 4rem;
+}
+
+td {
+  padding: 2.4rem 2.4rem 2.4rem 4rem;
+}
+
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+td.user img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+td.user a > p {
+  font-weight: bold;
+  color: var(--color-table-text);
+}
+
+td.user span {
+  color: var(--color-table-text);
+}
+
+tbody tr, th {
+  border-bottom: .1rem solid var(--color-table-border);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--color-table-row-odd);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--color-table-row-even);
+}
+
+.button-remove {
+  color: var(--color-danger);
+  background: none;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: .6rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-table-border);
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+
+
+/*
+
+PENDENTE: implementar scrollbar no tbody e incluir bordas externas na tabela
+
+tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
 }
 
 thead {
@@ -118,37 +197,12 @@ thead {
 
 tbody {
   display: block;
-  height: 200px;
   overflow-y: auto;
   scrollbar-gutter: initial;
+
+  height: 70%;
+  max-height: 70vh;
 }
 
-th {
-  background-color: var(--color-table-head-bg);
-}
 
-tr {
-  display: table;
-  width: 100%;
-  table-layout: fixed;
-}
-
-table tr:nth-child(odd) {
-  background-color: var(--color-table-row-odd);
-}
-
-table tr:nth-child(even) {
-  background-color: var(--color-table-row-even);
-}
-
-td.user {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.button-remove {
-  color: var(--color-danger);
-  background: none;
-  cursor: pointer;
-}
+*/
