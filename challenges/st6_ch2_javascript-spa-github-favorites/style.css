@@ -1,0 +1,66 @@
+:root {
+
+  --color-body-bg: #000000;
+  --color-neutral: #FFF;
+  --color-danger: #F75A68;  
+  
+  --color-table-head-bg: #092D38;
+  --color-table-row-odd: rgba(6, 22, 27, 0.50);
+  --color-table-row-even: #4A808C; 
+  --color-table-text: #E1E1E6;
+
+  --color-button-bg: #065E7C;
+  --color-input-ph: #7C7C8A;
+  --color-input-bg: #06181C;
+  
+  --font-family: 'Roboto', sans-serif;
+
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: normal normal 1.6rem var(--font-family);
+  border: none;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+header {
+  margin: 11.5rem 16rem;
+  display: flex;
+  place-content: space-between;
+  place-items: center;
+}
+
+.input-wrapper {
+  display: flex;
+  gap: .8rem;
+}
+
+#search-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--color-button-bg);
+  padding: 1.2rem 3.2rem;
+
+  border-radius: .5rem;
+}
+
+#search-input {
+  border-radius: .5rem;
+  background: var(--color-input-bg);
+  padding: 1.6rem;
+  color: white;
+}
+
+#search-input::placeholder {
+  color: var(--color-input-ph);
+}
