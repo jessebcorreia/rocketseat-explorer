@@ -13,7 +13,7 @@
   --color-button-bg: #065E7C;
   --color-input-ph: #7C7C8A;
   --color-input-bg: #06181C;
-  
+
   --font-family: 'Roboto', sans-serif;
 
   font-size: 62.5%;
@@ -24,8 +24,11 @@
   padding: 0;
   box-sizing: border-box;
   font: normal normal 1.6rem var(--font-family);
-  border: none;
   text-decoration: none;
+}
+
+input, button {
+  border: none;
 }
 
 body {
@@ -65,15 +68,21 @@ header {
   justify-content: center;
   align-items: center;
   gap: .8rem;
+  cursor: pointer;
 
   background: var(--color-button-bg);
   padding: 1.2rem 3.2rem;
   border-radius: .5rem;
   color: white;
+  transition: background .3s, color .3s;
+}
+
+#search-button:hover {
+  filter: brightness(.9);
 }
 
 #search-button:active {
-  filter: brightness(.9);
+  filter: brightness(.8);
 }
 
 #search-input {
@@ -106,18 +115,30 @@ table {
   overflow: hidden;
   width: 100%;
   border-collapse: collapse;
-  border-radius: 1.2rem;
 }
-
 
 table * {
   text-align: left;
   font-size: 2rem;
 }
 
+thead {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
 th {
   background-color: var(--color-table-head-bg);
   padding: 1.6rem 2.4rem 1.6rem 4rem;
+}
+
+th:first-child{
+  border-top-left-radius: 1.2rem;
+}
+
+th:last-child{
+  border-top-right-radius: 1.2rem;
 }
 
 td {
@@ -146,8 +167,19 @@ td.user span {
   color: var(--color-table-text);
 }
 
-tbody tr, th {
-  border-bottom: .1rem solid var(--color-table-border);
+tbody {
+  display: block;
+  overflow-y: auto;
+  scrollbar-gutter: initial;
+  height: 70%;
+  max-height: 70vh;
+  border-radius: 0 0 1.2rem 1.2rem;
+}
+
+tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
 }
 
 tbody tr:nth-child(odd) {
@@ -164,6 +196,10 @@ tbody tr:nth-child(even) {
   cursor: pointer;
 }
 
+.button-remove:hover{
+  filter: brightness(.9);
+}
+
 ::-webkit-scrollbar {
   width: .6rem;
 }
@@ -178,31 +214,25 @@ tbody tr:nth-child(even) {
 }
 
 
-
-/*
-
-PENDENTE: implementar scrollbar no tbody e incluir bordas externas na tabela
-
-tr {
-  display: table;
-  width: 100%;
-  table-layout: fixed;
+/* Linha que irá aparecer quando nenhum usuário estiver no banco de dados */
+.table-empty{
+  height: 69vh;
 }
 
-thead {
-  display: table;
-  width: 100%;
-  table-layout: fixed;
+.table-empty div {
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+  justify-content: center;
 }
 
-tbody {
-  display: block;
-  overflow-y: auto;
-  scrollbar-gutter: initial;
-
-  height: 70%;
-  max-height: 70vh;
+.table-empty img {
+  width: 13.2rem;
+  height: 12.5rem;
 }
 
-
-*/
+.table-empty p {
+  font-size: 4rem;
+  color: #4E5455;
+  font-family: 'Roboto Mono', sans-serif;
+}

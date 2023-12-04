@@ -83,8 +83,8 @@ export class FavoritesView extends Favorites {
       }
 
       this.tbody.append(newRow)
-
     })
+    this.createRowIfEmpty()
   }
 
   removeAllRows(){
@@ -97,7 +97,6 @@ export class FavoritesView extends Favorites {
   createRow(username, name, public_repos, followers){
 
     const htmlContent = `
-    <tr>
       <td class="user">
         <img src="https://github.com/${username}.png" alt="foto de ${name}">
         <a href="https://github.com/${username}" target="_blank">
@@ -108,7 +107,6 @@ export class FavoritesView extends Favorites {
       <td>${public_repos}</td>
       <td>${followers}</td>
       <td><button class="button-remove">Remover</button></td>
-    </tr>
     `
 
     const tr = document.createElement('tr')
@@ -116,4 +114,55 @@ export class FavoritesView extends Favorites {
     return tr
   }
 
+  createRowIfEmpty(){
+    if(this.entries.length !== 0){return}
+
+    const htmlContent = `
+      <td class="table-empty" colspan="4">
+        <div>
+          <img src="assets/favicon.svg" alt="Desenho de uma estrela">
+          <p>Nenhum favorito ainda</p> 
+        </div>
+      </td>
+    `
+    const tr = document.createElement('tr')
+    tr.innerHTML = htmlContent    
+    this.tbody.appendChild(tr)
+  }
 }
+
+
+
+
+
+
+
+//função simples para testar o funcionamento da aplicação
+export function test(option){
+
+  switch(option){
+    
+    case "add":
+      const favoritesView = new FavoritesView("#app")
+
+      const usernames = ['torvalds', 'Bullas', 'gabrielfroes', 'lucasmontano', 'deyvin', 'matheusbattisti', 'gustavoguanabara', 'cursoemvideo', 'filipedeschamps', 'akitaonrails', 'maykbrito', 'jessebcorreia']
+
+      usernames.forEach( user => {
+        favoritesView.add(user)
+      })
+
+      break
+
+    case "delete":
+      localStorage.clear()
+      break
+
+    default:
+      "nenhuma opção foi selecionada"
+      break
+
+  }
+}
+
+//test("add")
+//test("delete")
