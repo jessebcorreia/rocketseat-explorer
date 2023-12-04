@@ -130,39 +130,3 @@ export class FavoritesView extends Favorites {
     this.tbody.appendChild(tr)
   }
 }
-
-
-
-
-
-
-
-//função simples para testar o funcionamento da aplicação
-export function test(option){
-
-  switch(option){
-    
-    case "add":
-      const favoritesView = new FavoritesView("#app")
-
-      const usernames = ['torvalds', 'Bullas', 'gabrielfroes', 'lucasmontano', 'deyvin', 'matheusbattisti', 'gustavoguanabara', 'cursoemvideo', 'filipedeschamps', 'akitaonrails', 'maykbrito', 'jessebcorreia']
-
-      usernames.forEach( user => {
-        favoritesView.add(user)
-      })
-
-      break
-
-    case "delete":
-      localStorage.clear()
-      break
-
-    default:
-      "nenhuma opção foi selecionada"
-      break
-
-  }
-}
-
-//test("add")
-//test("delete")
