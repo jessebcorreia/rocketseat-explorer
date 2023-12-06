@@ -1,16 +1,10 @@
 // import da classe Router, dentro do express
 const { Router } = require("express")
+const UsersController = require("../controllers/UsersController")
 
-// instância da classe Router
-const usersRoutes = Router()
+const usersRoutes = Router() // instância do método Router, do framework express
+const usersController = new UsersController() // instância da classe UsersController, criada por mim
 
-// já está dentro de /users (definido pelo index.js)
-usersRoutes.post("/", (request, response) => {
-  // desestruturação dos dados .JSON, dentro da requisição
-  const {name, email, password} = request.body
-  // apresentação da resposta, devolvendo os dados .JSON desestruturados
-  response.json({name, email, password})
-})
+usersRoutes.post("/", usersController.create) // já está dentro de /users (definido pelo index.js)
 
-// exportação do módulo
-module.exports = usersRoutes
+module.exports = usersRoutes // exportação do módulo

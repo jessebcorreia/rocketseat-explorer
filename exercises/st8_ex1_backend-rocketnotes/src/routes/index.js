@@ -1,16 +1,12 @@
-// import da classe Router, dentro do express
-const { Router } = require("express")
+const { Router } = require("express") // import do método Router, dentro do express
 
-// instância da classe Router
-const routes = Router()
+const routes = Router() // instância do método Router
 
-// import das rotas de USUÁRIOS
-const usersRoutes = require('./users.routes')
+const usersRoutes = require('./users.routes') // import das rotas de USUÁRIOS
 
 /* criação da rota /users. Não é mais necessário
   repetir /users, mas sim apenas definir subrotas,
   dentro do users.routes.js */
 routes.use("/users", usersRoutes)
 
-// exportação do módulo
-module.exports = routes
+module.exports = routes // exportação do módulo
