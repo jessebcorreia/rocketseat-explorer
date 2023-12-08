@@ -2,11 +2,11 @@ require("express-async-errors")
 const express = require("express") // import do framework express
 const AppError = require("./utils/AppError") // import da classe de erro
 const routes = require("./routes") // import das rotas definidas na pasta "routes"
-const database = require("./database/sqlite") // import do banco de dados
+const migrationsRun = require("./database/sqlite/migrations") // import do banco de dados
 
 const app = express() // instância do express()
 
-database()
+migrationsRun()
 
 // função para lidar com os erros da aplicação (utilizando classe própria)
 function errorHandler(error, request, response, next) {
