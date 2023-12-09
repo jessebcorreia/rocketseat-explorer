@@ -6,5 +6,6 @@ const usersRoutes = Router() // instância do método Router, do framework expre
 const usersController = new UsersController() // instância da classe UsersController, criada por mim
 
 usersRoutes.post("/", usersController.create) // já está dentro de /users (definido pelo index.js)
+usersRoutes.put("/:id", usersController.update) // executa o método update do UsersController
 
 module.exports = usersRoutes // exportação do módulo
