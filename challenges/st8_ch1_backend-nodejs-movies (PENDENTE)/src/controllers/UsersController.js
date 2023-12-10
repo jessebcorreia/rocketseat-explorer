@@ -66,7 +66,7 @@ class UsersController {
       })
       .where({id})
 
-    res.status(201).json({
+    res.status(200).json({
       message: "Os dados do usuário foram atualizados com sucesso!"
     })
   }
