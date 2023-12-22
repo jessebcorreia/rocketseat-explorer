@@ -36,5 +36,19 @@ export default createGlobalStyle`
     filter: brightness(.9)
   }
 
+  ::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 .5rem ${ ({theme}) => theme.COLORS.GRAY_100 };
+    border-radius: 1rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: ${ ({theme}) => theme.COLORS.ORANGE };
+    border-radius: 10px;
+  }
+
 `
 
